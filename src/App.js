@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { GlobalStyle } from './globalStyles'
-import {Home} from './pages/Home'
+import { Navigation } from './Navigation'
+import { Home } from './pages/Home'
 import { Hello } from './pages/Home/components/Hello'
 
 const App = () => {
@@ -8,7 +9,7 @@ const App = () => {
     <Fragment>
       <GlobalStyle />
       <Hello name="Juan" />
-      <Home  />
+      <Navigation />
     </Fragment>
   )
 }
