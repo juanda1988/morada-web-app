@@ -22,7 +22,7 @@ export const PropertyImageWrapper = styled.div`
 
 export const PropertyInfoWrapper = styled.div`
   flex: 70;
-  border: 1px solid red;
+  //border: 1px solid red;
   margin-left: 10px;
 
   h3 {

@@ -21,6 +21,10 @@ export const Home = () => (
             }
         </PropertyTypesContainer>
         <PropertyCard />
+        <PropertyCard />
+        <PropertyCard />
+        <PropertyCard />
+        
     </Page>
 )
 
