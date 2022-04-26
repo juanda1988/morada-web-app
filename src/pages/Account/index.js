@@ -21,6 +21,9 @@ export const Account = () => {
             <hr />
             
             <Button label="iniciar sesión" linkTo={"/login"}/>
+            <br />
+            <p>¿No estás registrado aun?</p>
+            <Button label="registrarse" linkTo={"/signup"}/>
         </div>
     )
 

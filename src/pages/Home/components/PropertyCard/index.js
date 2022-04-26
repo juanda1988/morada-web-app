@@ -1,11 +1,12 @@
 import { PropertyTypeLabel } from "../../../../components/PropertyTypeLabel"
 import { Subtitle } from "../../../../globalStyles"
+import { Descripcion } from "../Descripcion"
 import { PropertyCardWrapper, PropertyImageWrapper, PropertyInfoWrapper } from "./styles"
 
 export const PropertyCard = () => (
     <PropertyCardWrapper>
         <PropertyImageWrapper>
-            <img alt="apartamento" src="https://images.ctfassets.net/8lc7xdlkm4kt/5XZ6f7kcqu0cVgTnFoFnLt/52ac8951ab8edd991e28b383a6eac830/61M2.jpg" />
+            <img alt="apartamento" src="https://images.ctfassets.net/8lc7xdlkm4kt/5XZ6f7kcqu0cVgTnFoFnLt/52ac8951ab8edd991e28b383a6eac830/61M2.jpg" onClick={<Descripcion/>}/>
         </PropertyImageWrapper>
         <PropertyInfoWrapper>
             <h3>Apartamento en Laureles</h3>

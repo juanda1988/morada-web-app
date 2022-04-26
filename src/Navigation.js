@@ -9,6 +9,7 @@ import { Login } from './pages/Login';
 import { Signup } from './pages/Signup';
 import { Account } from './pages/Account';
 import {Favorites} from './pages/Favorites';
+import { Descripcion } from './pages/Home/components/Descripcion';
 
 export const Navigation = () => (
     <BrowserRouter>
@@ -20,6 +21,7 @@ export const Navigation = () => (
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='*' element={<NotFound />} />
+            <Route path='/descripcion' element={<Descripcion />}/>
         </Routes>
     </BrowserRouter>
 )
