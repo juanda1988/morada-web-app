@@ -1,7 +1,11 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { MENU_HEIGHT } from "./constants/styles";
 
 export const GlobalStyle = createGlobalStyle`
 
+   *, ::after, ::before {
+        box-sizing: border-box;
+    
    body{
        margin:0;
        padding:0;
@@ -25,6 +29,8 @@ export const FormControl = styled.div`
   margin: 5px 0;
   border-radius:6px;
   background-color: #f2f2f2;
+  padding: 5px 10px;
+  display:flex;
 
   label {
       display: block;
@@ -34,7 +40,7 @@ export const FormControl = styled.div`
 
   }
 
-  input[type="email"],input[type="password"],input[type="name"],input[type="telefono"]{
+  input[type="email"],input[type="password"],input[type="name"],input[type="telefono"],input[type="text"]{
       display: block;
       width:100%;
       font-size: 1.1em;
@@ -45,7 +51,22 @@ export const FormControl = styled.div`
       outline:none;
 
   }
-
-
-
 `
+export const FormControlAction = styled.div`
+  display:flex;
+  justify-content: center;
+  align-items:center;
+
+`;
+  export const FooterFixed = styled.footer`
+    position:fixed;
+    bottom:${MENU_HEIGHT + 5}px;
+    left:0;
+    width:100%
+  `;
+
+  export const FormControlInput = styled.div`
+    //border: 1px solid blue;
+    flex:1;
+  `
+

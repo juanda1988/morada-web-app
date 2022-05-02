@@ -1,6 +1,6 @@
 import { Button } from "../../components/Button";
 import {Page} from "../../components/Page";
-import { PageTittle } from "../../globalStyles";
+import { PageTittle, FooterFixed } from "../../globalStyles";
 export const Account = () => {
 
     const isAuth = false;
@@ -11,7 +11,9 @@ export const Account = () => {
             <h5>99999111</h5>
             <p>jerson.suaza@cedesistemas.edu.co</p>
             <hr />
-            <Button label="cerrar Sesión" onPress={() =>{alert('cerrar sesión')}}/>
+            <FooterFixed>
+                <Button label="cerrar Sesión" onPress={() =>{alert('cerrar sesión')}}/>
+            </FooterFixed>
         </div>
     )
     const UserUnauthorized = () =>(
@@ -21,7 +23,7 @@ export const Account = () => {
             <hr />
             
             <Button label="iniciar sesión" linkTo={"/login"}/>
-            <br />
+            
             <p>¿No estás registrado aun?</p>
             <Button label="registrarse" linkTo={"/signup"}/>
         </div>

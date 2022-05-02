@@ -37,7 +37,7 @@ export const Signup = () => (
               </div>
               </FormControl>
               <br />
-              <Button label="Registrarse" onPress = {()=> alert("")}/>
+              <Button label="Registrarse" onPress = {()=> alert("Gracias por completar el registro")}/>
           </form>
     </Page>
 )
