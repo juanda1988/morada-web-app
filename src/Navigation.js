@@ -10,6 +10,7 @@ import { Signup } from './pages/Signup';
 import { Account } from './pages/Account';
 import {Favorites} from './pages/Favorites';
 import { Descripcion } from './pages/Home/components/Descripcion';
+import { AddProperty } from './pages/AddProperty';
 
 export const Navigation = () => (
     <BrowserRouter>
@@ -22,6 +23,7 @@ export const Navigation = () => (
             <Route path='/signup' element={<Signup />} />
             <Route path='*' element={<NotFound />} />
             <Route path='/descripcion' element={<Descripcion />}/>
+            <Route path='/add-property' element={<AddProperty />}/>
         </Routes>
     </BrowserRouter>
 )
