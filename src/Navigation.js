@@ -18,7 +18,7 @@ export const Navigation = () => (
             <Route path='/' element={<Home />} />
             <Route path='/property' element={<Property />} />
             <Route path='/account' element={<Account />} />
-            <Route path='/favorites' element={<Favorites/>} />
+            <Route path='/favorites' element={<Favorites />} />
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='*' element={<NotFound />} />
