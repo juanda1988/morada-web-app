@@ -1,9 +1,9 @@
 import {Page} from "../../components/Page";
-import {FormControl, PageTittle} from "../../globalStyles";
+import {FormControl, PageTitle} from "../../globalStyles";
 import {Button} from "../../components/Button";
 export const Signup = () => (
     <Page hideMenu>
-          <PageTittle>Registrarse</PageTittle>
+          <PageTitle>Registrarse</PageTitle>
           <br />
           <form>
              <FormControl>

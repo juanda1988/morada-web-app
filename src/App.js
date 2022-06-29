@@ -4,7 +4,7 @@ import { Navigation } from './Navigation'
 import { Home } from './pages/Home'
 import { Hello } from './pages/Home/components/Hello'
 
-const App = () => {
+export const App = () => {
   return (
     <Fragment>
       <GlobalStyle />

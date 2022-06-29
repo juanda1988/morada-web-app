@@ -1,9 +1,9 @@
 import {Page} from "../../components/Page";
-import {FormControl, PageTittle} from "../../globalStyles";
+import {FormControl, PageTitle} from "../../globalStyles";
 import {Button} from "../../components/Button";
 export const AddProperty = () => (
     <Page hideMenu>
-          <PageTittle>Registrar Propiedad</PageTittle>
+          <PageTitle>Registrar Propiedad</PageTitle>
           <br />
           <form>
              <FormControl>

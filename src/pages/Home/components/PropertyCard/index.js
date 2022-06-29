@@ -1,5 +1,5 @@
 import { PropertyTypeLabel } from "../../../../components/PropertyTypeLabel"
-import { Subtitle } from "../../../../globalStyles"
+import { SubTitle } from "../../../../globalStyles"
 import { Descripcion } from "../Descripcion"
 import { PropertyCardWrapper, PropertyImageWrapper, PropertyInfoWrapper } from "./styles"
 
@@ -10,9 +10,9 @@ export const PropertyCard = () => (
         </PropertyImageWrapper>
         <PropertyInfoWrapper>
             <h3>Apartamento en Laureles</h3>
-            <Subtitle>
+            <SubTitle>
                 Laureles, Medellin
-            </Subtitle>
+            </SubTitle>
             <PropertyTypeLabel />
             <p>Venta</p>
             <p>$400.000</p>

@@ -1,6 +1,6 @@
 import { Button } from "../../components/Button";
 import {Page} from "../../components/Page";
-import { PageTittle, FooterFixed } from "../../globalStyles";
+import { PageTitle, FooterFixed } from "../../globalStyles";
 export const Account = () => {
 
     const isAuth = false;
@@ -31,7 +31,7 @@ export const Account = () => {
 
     return(
     <Page>
-          <PageTittle>Mi cuenta</PageTittle>
+          <PageTitle>Mi cuenta</PageTitle>
           {
               isAuth ? <UserInfo /> : <UserUnauthorized />
           }
