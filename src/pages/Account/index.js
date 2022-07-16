@@ -1,40 +1,43 @@
+import { useContext } from "react";
 import { Button } from "../../components/Button";
-import {Page} from "../../components/Page";
+import { Page } from "../../components/Page";
+import { UserContext } from "../../contexts/UserContext";
 import { PageTitle, FooterFixed } from "../../globalStyles";
+
 export const Account = () => {
 
-    const isAuth = false;
+    const { user, setUser } = useContext(UserContext);
 
     const UserInfo = () => (
         <div>
-            <h3>Jerson</h3>
-            <h5>99999111</h5>
-            <p>jerson.suaza@cedesistemas.edu.co</p>
+            <h3>{user.name}</h3>
+            <h5>{user.phone}</h5>
+            <p>{user.email}</p>
             <hr />
             <FooterFixed>
-                <Button label="cerrar Sesión" onPress={() =>{alert('cerrar sesión')}}/>
+                <Button 
+                    label="Cerrar sesión" 
+                    onPress={ () => { alert('cerrar sesión') } } 
+                />
             </FooterFixed>
         </div>
     )
-    const UserUnauthorized = () =>(
+
+    const UserUnauthorized = () => (
         <div>
             <h2>No estás autenticado</h2>
-            <p>Para acceder a tu perfil de usuario debes iniciar sesión</p>
+            <p>Para acceder a tu perfil de usurio debes iniciar sesión</p>
             <hr />
-            
-            <Button label="iniciar sesión" linkTo={"/login"}/>
-            
-            <p>¿No estás registrado aun?</p>
-            <Button label="registrarse" linkTo={"/signup"}/>
+            <Button label="Iniciar sesión" linkTo="/login" />
         </div>
     )
 
-    return(
-    <Page>
-          <PageTitle>Mi cuenta</PageTitle>
-          {
-              isAuth ? <UserInfo /> : <UserUnauthorized />
-          }
-    </Page>
+    return (
+        <Page>
+            <PageTitle>Mi cuenta</PageTitle>
+            {
+                user.isAuthenticated ? <UserInfo /> : <UserUnauthorized />
+            }
+        </Page>
     )
 };
