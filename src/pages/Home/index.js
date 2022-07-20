@@ -80,7 +80,7 @@ export const Home = () => {
       </PropertyTypesContainer>
 
       {properties.map((item, key) => (
-        <PropertyCard key={key} />
+        <PropertyCard {...item} key={key} />
       ))}
     </Page>
   );
