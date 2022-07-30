@@ -13,6 +13,7 @@ import { useContext } from "react";
 import { UserContext } from "./contexts/UserContext";
 import { requestHttp, HTTP_VERBS } from "./utils/HttpRequest";
 import { useEffect } from "react";
+import { POCUploadImage } from "./pages/POCUploadImage";
 
 export const Navigation = () => {
   const { user, setUser } = useContext(UserContext);
@@ -59,6 +60,7 @@ export const Navigation = () => {
       <Route path="*" element={<NotFound />} />
       <Route path="/descripcion" element={<Descripcion />} />
       <Route path="/add-property" element={<AddProperty />} />
+      <Route path="/pocuploadimage" element={<POCUploadImage />} />
     </Routes>
   );
 };

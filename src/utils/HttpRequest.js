@@ -8,30 +8,36 @@ export const HTTP_VERBS = {
   DELETE: "delete",
 };
 
-const headersConfig = (token) => {
-    return {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        Authorization: `Bearer ${token}`
-    }
+export const CONTENT_TYPES = {
+  APPLICATION_JSON: "application/json",
+  MULTIPART_FORM_DATA: "multipart/form-data",
+};
+
+const headersConfig = (contentType, token) => {
+  return {
+    "Content-Type": contentType,
+    Accept: "application/json",
+    Authorization: `Bearer ${token}`,
+  };
 };
 
 export const requestHttp = async ({
-    method = HTTP_VERBS.POST,
-    endpoint = '/',
-    body = {},
-    params = {}, //query params
-    token = null
+  method = HTTP_VERBS.POST,
+  endpoint = "/",
+  body = {},
+  params = {}, //query params
+  token = null,
+  contentType = CONTENT_TYPES.APPLICATION_JSON,
 }) => {
   try {
     const url = process.env.REACT_APP_BASE_API + endpoint;
-    const authToken = token || getToken(); 
+    const authToken = token || getToken();
     const options = {
-        url,
-        method,
-        data: body,
-        params,
-        headers: headersConfig(authToken)
+      url,
+      method,
+      data: body,
+      params,
+      headers: headersConfig(contentType, authToken),
     };
     return await axios(options);
   } catch (error) {
