@@ -50,7 +50,7 @@ export const Home = () => {
       });
       setProperties(response.data.properties);
     } catch (error) {
-      // TODO
+      console.log(error);
     }
   };
 
@@ -64,8 +64,7 @@ export const Home = () => {
 
   return (
     <Page>
-      <h1>home - morada</h1>
-      <h4>{user.name}</h4>
+      <br />
       <PropertyTypesContainer>
         {PropertiesTypes.map((item, key) => (
           <PropertyTypeButton
