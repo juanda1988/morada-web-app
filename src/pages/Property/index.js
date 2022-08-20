@@ -76,11 +76,31 @@ export const Property = () => {
               </h2>
 
               <h3>{property.property ? property.property.description : ""}</h3>
-              <h3>{property.property ? property.property.city : ""}</h3>
-              <h3>{property.property ? property.property.zone : ""}</h3>
-              <h3>{property.property ? property.property.propertyType : ""}</h3>
-              <h3>{property.property ? property.property.businessType : ""}</h3>
-              <h3>{property.property ? property.property.value : ""}</h3>
+              <h3>
+                {property.property
+                  ? getCityZoneLabel(property.property.city)
+                  : ""}
+              </h3>
+              <h3>
+                {property.property
+                  ? getCityZoneLabel(property.property.zone)
+                  : ""}
+              </h3>
+              <h3>
+                {property.property
+                  ? getPropertyTypeLabel(property.property.propertyType)
+                  : ""}
+              </h3>
+              <h3>
+                {property.property
+                  ? getBusinessTypeLabel(property.property.businessType)
+                  : ""}
+              </h3>
+              <h3>
+                {property.property
+                  ? getCurrencyFormat(property.property.value)
+                  : ""}
+              </h3>
               <br />
             </PropertyInfoWrapper>
             <PropertyDetail_Options>
